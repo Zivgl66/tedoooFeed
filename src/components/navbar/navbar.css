@@ -1,0 +1,124 @@
+.navbar {
+  width: 100%;
+  background-color: #ffffff;
+  position: sticky;
+}
+
+.navbar-wrapper {
+  /* height: 100%; */
+  margin: 0 300px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  border-radius: 3px;
+  width: 36px;
+}
+.navbar-logo:hover {
+  cursor: pointer;
+}
+
+.navbar-search {
+  margin-left: 10px;
+  line-height: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+.search-icon {
+  position: absolute;
+  margin-left: 3px;
+  color: #757878;
+}
+
+.navbar-search input {
+  border-radius: 35px;
+  /* padding: 12px; */
+  padding: 10px 25px;
+  height: 35px;
+  min-height: 35px;
+  text-overflow: ellipsis;
+  line-height: 1.5715;
+  min-width: 100%;
+  max-width: 100%;
+  transition: all 0.3s, height 0s;
+  vertical-align: bottom;
+  background-color: #f4f5f5;
+  border: none;
+  box-shadow: none;
+  resize: none;
+  overflow: auto;
+}
+
+.navbar-search input:focus-visible {
+  outline: none;
+}
+
+.navbar-links {
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.navbar-links .link {
+  color: #757878;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+.navbar-links .link:hover {
+  cursor: pointer;
+}
+.navbar-links .active {
+  color: #41bfaa;
+  border-bottom: 2px solid #41bfaa;
+}
+.navbar-links .link svg {
+  margin-right: 3px;
+}
+.link-text {
+  font-size: 0.9rem;
+}
+.user-avatar-link {
+  margin-right: 10px;
+}
+.user-avatar-link:hover {
+  cursor: pointer;
+}
+.user-avatar-link img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  .navbar-wrapper {
+    margin: 0;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  .navbar-wrapper {
+    margin: 0 10px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .navbar-wrapper {
+    margin: 0 100px;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  .navbar-wrapper {
+    margin: 0 300px;
+  }
+}
