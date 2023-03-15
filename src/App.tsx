@@ -22,7 +22,7 @@ function App() {
   //initial fetch of data and 1st render of items
   useEffect(() => {
     axios
-      .get("http://dev.tedooo.com/feed.json", axiosConfig)
+      .get("https://dev.tedooo.com/feed.json", axiosConfig)
       .then((result: any) => {
         setFeeedDataArr(result.data.data);
         setSlicedDataArr(result.data.data.slice(0, sixMore));
