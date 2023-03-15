@@ -12,10 +12,17 @@ function App() {
   const [sixMore, setSixMore] = useState<number>(6);
   const [hasMoreData, setHasMoreData] = useState<boolean>(true);
 
+  let axiosConfig = {
+    headers: {
+      "Content-Type": "application/json;charset=UTF-8",
+      "Access-Control-Allow-Origin": "*",
+    },
+  };
+
   //initial fetch of data and 1st render of items
   useEffect(() => {
     axios
-      .get("https://dev.tedooo.com/feed.json")
+      .get("https://dev.tedooo.com/feed.json", axiosConfig)
       .then((result: any) => {
         setFeeedDataArr(result.data.data);
         setSlicedDataArr(result.data.data.slice(0, sixMore));
